@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="style.css">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <title>html development</title>
+
+
+    </head>
+    <body id="home">
+        <div class="navbar">
+            <input type="checkbox" id="check">
+            <a href="index.html"> <img src="LLL.jpg" alt="logo" class="logo"> </a>
+
+            <botton id="theme-tohggle" class="theme-tohggle" aria-label="Toggle dark mode">
+                <i class="fas fa moon"></i>
+            </botton>
+            <ul>
+                <li><a href="index.html">home</a></li>
+                <li><a href="contact.html">contact</a></li>
+                <li><a href="about.html">about</a></li>
+                
+            </ul> 
+            
+            <label for="check" class="checkbox">
+                <img src="https://static.vecteezy.com/system/resources/previews/026/306/374/original/menu-list-icon-app-navigation-option-page-interface-dropdown-three-lines-button-dots-sign-symbol-black-artwork-graphic-illustration-clipart-eps-vector.jpg"  class="menu" alt="meue">
+            </label>
+           
+        </div>
+        
+        <div class="detail">
+            <img src="BBB.jpg" class="profile">
+            <div class="title">
+            <h1>HI, am BEZAWIT MOLLA </h1>
+            <H2>A LITLE BIT ABOUT ME</H2>
+            <H3>Welcome!</H3>
+<P>I’m a 21-year-old ,3<SUP>rd</SUP> year Computer Science student at Gonder University. 
+Proudly Ethiopian and an Orthodox Christian, I embrace my culture and values with joy. 
+I focus on my studies and personal growth, without any political affiliations. </P>
+           <p>pursuing my passion for design! I have a keen interest in creating visually appealing and user-friendly web pages.  
+            My experience includes working on various design projects that have helped
+             me hone my skills in  web development.</p>
+            </p>
+            <H1>Thank you for visiting my site!</H1><!-- Canvas Background -->
+<canvas id="bgCanvas"></canvas>
+
+<style>
+  #bgCanvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1; /* Behind everything */
+    pointer-events: none; /* Don't block clicks */
+  }
+</style>   <script>
+  const canvas = document.getElementById("bgCanvas");
+  const ctx = canvas.getContext("2d");
+
+  // Resize canvas to fill window
+  function resizeCanvas() {
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+  }
+  window.addEventListener("resize", resizeCanvas);
+  resizeCanvas();
+
+  // Particle class
+  class Particle {
+    constructor() {
+      this.x = Math.random() * canvas.width;
+      this.y = Math.random() * canvas.height;
+      this.radius = Math.random() * 2 + 1;
+      this.speedX = (Math.random() - 0.5) * 0.5;
+      this.speedY = (Math.random() - 0.5) * 0.5;
+    }
+
+    move() {
+      this.x += this.speedX;
+      this.y += this.speedY;
+
+      if (this.x < 0 || this.x > canvas.width) this.speedX *= -1;
+      if (this.y < 0 || this.y > canvas.height) this.speedY *= -1;
+    }
+
+    draw() {
+      ctx.beginPath();
+      ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2);
+      ctx.fillStyle = "rgba(255, 255, 255, 0.6)";
+      ctx.fill();
+    }
+  }
+
+  let particles = [];
+
+  function initParticles(num = 100) {
+    particles = [];
+    for (let i = 0; i < num; i++) {
+      particles.push(new Particle());
+    }
+  }
+
+  function animate() {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+    // Draw gradient background
+    const gradient = ctx.createLinearGradient(0, 0, 0, canvas.height);
+    //gradient.addColorStop(0, "#0f0f0f");
+    //gradient.addColorStop(1, "#1a1a2e");
+//gradient.addColorStop(0, "#0f0f0f"); // Soft white
+//gradient.addColorStop(1, "#e0e0e0"); // Light gray
+gradient.addColorStop(1, "#1a1a2e");
+gradient.addColorStop(0, "#f5f5f5");
+//gradient.addColorStop(0, "#f5f5f5"); // Light soft white
+//gradient.addColorStop(1, "#e0e0e0"); // Slightly darker light gray
+
+    ctx.fillStyle = gradient;
+    ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+    // Animate and draw particles
+    particles.forEach(p => {
+      p.move();
+      p.draw();
+    });
+
+    requestAnimationFrame(animate);
+  }
+
+  // Start animation
+  initParticles(80);
+  animate();
+</script>  
+            </div>
+        </div>  
+    <footer>
+  <div class="footer-content">
+    <p>&copy; 2025 Developer BEZAWIT. All rights reserved.</p>
+    
+  </div>
+</footer>
+
+        
+        
+    
+    <script src="canvas.js"></script>
+    </body>
+</html>
