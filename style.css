@@ -1,16 +1,21 @@
-*{
-
-    margin: 0;
+*{margin: 0;
     padding: 0;
 }
-#home{background-color:   ;}#FFB6C1
-#about{background-color: #F5F5DC; }
-#contact{ background-color: rgba(163, 219, 252, 0.858) }
+#home{
+    color: #e90707;;
+    background-color:   #b69fa36f;}
+#about{
+    color: #e90707;;
+    background-color: #b69fa36f;}
+#contact{
+    color: #e90707;;
+    background-color: #b69fa36f;}
 .navbar{
     display:flex ;
     justify-content: space-between;
     align-items: center;
-    background-color: rgb(104, 145, 104) ;
+    background-color: rgb(189, 184, 106) ;
+    background-image: none;
     padding-bottom: 2%;
 }
 .logo{
@@ -38,19 +43,23 @@ li{
 
 }
 
-a{background-color: rgb(188, 193, 223);;
+a{background-color: rgb(188, 193, 223);
+    background-image: none;
     text-decoration:none ;
     font-size:large ;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    font-weight: 600;
+    font-weight: 100;
+    display: flexbox;
 }
 
 a:hover{
     cursor:pointer;
     color: rgb(43, 171, 226);
+    background-image: none;
     font-size: x-large;
     transition: all;
     transition-duration: 0.5s;
+     display: flexbox;
 
 
 }
@@ -60,17 +69,22 @@ gap: 20px;
 align-items:flex-start;
 }*/
 .contact-container form{
+    background-image: none;
     flex: 1;
-    display: flex;
+    background-image: none;
+    display:flexbox;
     flex-direction: column;
     gap: 20px;
      position: CENTER;
     
 }
+
 .contact-container input,
 .contact-container textarea{
+   background-image: none; 
     padding: 5px;
     border: 12px solid #dddddd;
+    background-image: none;
     border-radius: 15px;
     font-size: 1rem;
     transition: var(--transition);
@@ -79,6 +93,7 @@ height: 40px;
 }
 .contact-container input:focus,
 .contact-container textarea:focus{
+    background-image: none;
     outline: none;
     border-color:var(--accent-color);
     box-shadow: 0 0 0 3px rgba(red, green, blue, alpha);
@@ -88,6 +103,7 @@ margin-left: 300px;
 }
 
 .contact-container textarea{
+    background-image: none;
     min-height: 150px;
     resize: vertical;
     position:center;
@@ -95,22 +111,29 @@ margin-left: 300px;
 
 .detail{
     display: flex;
+    background-image: none;
     margin:auto;
     margin-top: 5%;
     justify-content: space-between;
 }
 .title{
     flex-basis: 50%;
+    background-image: none;
     margin-right: 300px;
     margin-top: 100px:
 }
 .profile{
+    background-image: none;
  width: 300px;
  height: 300px;
- background-color: blueviolet;
+ background-color: rgb(226, 144, 43);
  border-radius: 70%;
 }
+.pro {
+     
+}
 h2{
+    background-image: none;
     font-size: 25px;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-style: italic;
@@ -119,13 +142,14 @@ h2{
    
 
 }
-p{
+p{background-image: none;
+
     font-size: large;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-weight: 300;
     padding: 3%;
 }
-.ab{
+.ab{background-image: none;
     padding-top: 0%;
     padding-bottom: 0%;
   ; 
@@ -138,8 +162,8 @@ height:80px ;}
 height:100px ;}
 #ab{padding-top: 0%;
 padding-bottom: 3%;}
-footer {
-  background-color: #222;
+footer {background-image: none;
+  background-color: #4c80a3ee;
   color: #eee;
   padding: 20px 0;
   text-align: center;
@@ -147,7 +171,7 @@ footer {
 }
 
 footer a {
-  color: #4CAF50;
+  color: #151e15;
   text-decoration: none;
   margin: 0 10px;
   font-weight: bold;
